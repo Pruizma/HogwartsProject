@@ -1,0 +1,16 @@
+<lib-header></lib-header>
+<div class="container">
+    <div class="person-container">
+        <div class="card">
+            <div class="person-photo"><img src="https://pbs.twimg.com/media/FkRck1aWYAA7Yl4?format=png&name=large" alt="example"></div>
+            <div class="person-name"><span class="person-name-input">The mighty crow</span></div>
+        </div>
+    </div>
+    <div class="house-container">
+        <div class="card">
+            <div cdkDropList class="card-list" (cdkDropListDropped)="drop($event)">
+                <div class="card-box" *ngFor="let house of hogwartsHouses" cdkDrag>{{house}}</div>
+            </div>
+        </div>
+    </div>
+</div>
