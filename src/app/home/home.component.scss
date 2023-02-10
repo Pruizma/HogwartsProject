@@ -1,0 +1,62 @@
+.container {
+    background: lightgray;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    .person-container {
+        display: flex;
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .person-photo {
+                margin: auto;
+                img {
+                    max-width: 20rem;
+                    max-height: 20rem;
+                }
+            }
+            .person-name {
+                margin: auto;
+                span {
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: dimgrey;
+                }
+            }
+        }
+        
+    }
+    .house-container {
+        display: flex;
+        .card { 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .card-list {
+                width: 20rem;
+                margin: auto;
+                .card-box {
+                    height: 2rem;
+                    margin: 1rem;
+                }
+                .card-box:after {
+                    border: 0.5px solid lightgray;
+                }
+            }
+        }
+    }
+}
+
+.card {
+    width: 33rem;
+    height: 23rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    margin: auto;
+    padding: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    cursor: move;
+}

@@ -1,0 +1,18 @@
+.header {
+    height: 4rem;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        margin: auto;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .info-button {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 1.5rem;
+    }
+}
