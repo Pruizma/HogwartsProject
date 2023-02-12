@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent, HeaderComponentInfo } from '../header/header.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, HeaderComponentInfo],
   imports: [
-    CommonModule
+    CommonModule,
+    MatDialogModule,
   ],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent, HeaderComponentInfo]
 })
 export class HeaderModule { }

@@ -5,7 +5,6 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { HomeComponent } from './home.component';
 import { HeaderModule } from '../header/header.module';
 
-
 @NgModule({
   declarations: [HomeComponent],
   imports: [
