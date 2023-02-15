@@ -9,7 +9,10 @@
     <div class="house-container">
         <div class="card">
             <div cdkDropList class="card-list" (cdkDropListDropped)="drop($event)">
-                <div class="card-box" *ngFor="let house of hogwartsHouses" cdkDrag>{{house}}</div>
+                <div class="card-box" *ngFor="let house of hogwartsHouses" cdkDrag>
+                        <div class="houses-photo"><img class="house-photo" src={{house.foto}} alt="example2"></div>
+                        <div>    {{house.id}}</div>
+                </div>
             </div>
         </div>
     </div>

@@ -40,6 +40,10 @@
                 .card-box {
                     height: 2rem;
                     margin: 1rem;
+                        .house-photo{
+                            width: 10%;
+                            height: 10%;
+                        }
                 }
                 .card-box:after {
                     border: 0.5px solid lightgray;
