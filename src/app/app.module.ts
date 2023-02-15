@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 import { HomeModule } from './home/home.module';
@@ -12,7 +13,8 @@ import { HomeModule } from './home/home.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
