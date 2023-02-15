@@ -16,3 +16,8 @@
         margin: 1.5rem;
     }
 }
+::ng-deep .mat-dialog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

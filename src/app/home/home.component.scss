@@ -3,57 +3,85 @@
     height: 100%;
     display: flex;
     justify-content: space-evenly;
+  
     .person-container {
+      display: flex;
+  
+      .card {
         display: flex;
-        .card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            .person-photo {
-                margin: auto;
-                img {
-                    max-width: 20rem;
-                    max-height: 20rem;
-                }
-            }
-            .person-name {
-                margin: auto;
-                span {
-                    font-family: 'Courier New', Courier, monospace;
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    color: dimgrey;
-                }
-            }
+        flex-direction: column;
+        justify-content: space-evenly;
+  
+        .person-photo {
+          margin: auto;
+  
+          img {
+            max-width: 20rem;
+            max-height: 20rem;
+          }
         }
-        
+  
+        .person-name {
+          margin: auto;
+  
+          span {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: dimgrey;
+          }
+        }
+      }
     }
+  
     .house-container {
+      display: flex;
+  
+      .card { 
         display: flex;
-        .card { 
+        flex-direction: column;
+        justify-content: space-evenly;
+  
+        .card-list {
+          width: 20rem;
+          margin: auto;
+  
+          .card-box {
             display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            .card-list {
-                width: 20rem;
-                margin: auto;
-                .card-box {
-                    height: 2rem;
-                    margin: 1rem;
-                        .house-photo{
-                            width: 10%;
-                            height: 10%;
-                        }
-                }
-                .card-box:after {
-                    border: 0.5px solid lightgray;
-                }
+            flex-direction: row;
+            height: 3rem;
+            margin: 1.5rem;
+  
+            .house-photo {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 3rem;
+              height: 2rem;
+              margin-right: 1rem;
+  
+              img {
+                max-width: 3rem;
+                max-height: 2rem;
+              }
             }
+  
+            .houses-id {
+              font-size: 1.2rem;
+              font-weight: bold;
+              align-self: center;
+            }
+          }
+  
+          .card-box:after {
+            border: 0.5px solid lightgray;
+          }
         }
+      }
     }
-}
-
-.card {
+  }
+  
+  .card {
     width: 33rem;
     height: 23rem;
     background-color: white;
@@ -63,4 +91,4 @@
     margin-top: 5rem;
     margin-bottom: 5rem;
     cursor: move;
-}
+  }
