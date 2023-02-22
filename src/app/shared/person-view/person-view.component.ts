@@ -1,23 +1,20 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { MatTab, MatTabChangeEvent, MatTabGroup } from '@angular/material/tabs';
-import { fromEvent, Subscription } from 'rxjs';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'lib-person-view',
+  templateUrl: './person-view.component.html',
+  styleUrls: ['./person-view.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class PersonViewComponent implements OnInit {
 
-  selectedIndex: number = 0;
+  @Input()
+  name: string;
 
-  clickedElement: Subscription = new Subscription();
+  @Input()
+  urlPhoto: string;
 
-  counter: number = 0;
-
-  limite: number = 2;
-
+  @Output()
   hogwartsHouses : {id: string, foto: string}[] = [
     { id:'Griffindor',
       foto: 'https://logos-world.net/wp-content/uploads/2021/08/Gryffindor-Logo.png'},
@@ -37,12 +34,6 @@ export class HomeComponent implements OnInit {
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.hogwartsHouses, event.previousIndex, event.currentIndex);
-  }
-
-  yourFn(event) {
-    document.getElementById(`mat-tab-label-0-${this.counter}`).style.display = '';
-    this.counter = this.selectedIndex;
-    document.getElementById(`mat-tab-label-0-${this.selectedIndex}`).style.display = 'none';
   }
 
 }

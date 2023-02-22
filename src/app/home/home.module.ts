@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { HomeComponent } from './home.component';
+import { MatTabsModule } from '@angular/material/tabs';
 import { HeaderModule } from '../header/header.module';
+import { PersonViewModule } from '../shared/person-view/person-view.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -11,6 +13,8 @@ import { HeaderModule } from '../header/header.module';
     CommonModule,
     HeaderModule,
     DragDropModule,
+    MatTabsModule,
+    PersonViewModule,
     RouterModule.forChild([
       { path: '', component: HomeComponent},
     ])

@@ -1,23 +1,12 @@
 <lib-header></lib-header>
-<div class="container">
-    <div class="person-container">
-        <div class="card">
-            <div class="person-photo"><img src="https://pbs.twimg.com/media/FkRck1aWYAA7Yl4?format=png&name=large" alt="example"></div>
-            <div class="person-name"><span class="person-name-input">The mighty crow</span></div>
-        </div>
-    </div>
-    <div class="house-container">
-        <div class="card">
-            <div cdkDropList class="card-list" (cdkDropListDropped)="drop($event)">
-                <div class="card-box" *ngFor="let house of hogwartsHouses" cdkDrag>
-                  <div class="houses-photo">
-                    <img class="house-photo" src={{house.foto}} alt="example2">
-                  </div>
-                  <div class="houses-id">
-                    {{house.id}}
-                  </div>
-                </div>
-              </div>
-        </div>
-    </div>
-</div>
+<mat-tab-group [(selectedIndex)]="selectedIndex" (selectedTabChange)="yourFn($event)" [disablePagination]="true" animationDuration="2000ms">
+  <mat-tab class="hide-tab" [ngClass]="{'hide-tab' : selectedIndex > 0 }" label="Atrás">
+    <lib-person-view  [name]="'The mighty crow'" [urlPhoto]="'https://pbs.twimg.com/media/FkRck1aWYAA7Yl4?format=png&name=large'"></lib-person-view>
+  </mat-tab>
+  <mat-tab [ngClass]="{'hide-tab' : true }" label="Siguiente">
+    <lib-person-view  [name]="'The mighty crow 2'" [urlPhoto]="'https://pbs.twimg.com/media/FkRck1aWYAA7Yl4?format=png&name=large'"></lib-person-view>
+  </mat-tab>
+  <mat-tab [ngClass]="{'hide-tab' : selectedIndex <= 1 }" label="3">
+    <lib-person-view [name]="'The mighty crow 3'" [urlPhoto]="'https://pbs.twimg.com/media/FkRck1aWYAA7Yl4?format=png&name=large'"></lib-person-view>
+  </mat-tab>
+</mat-tab-group>

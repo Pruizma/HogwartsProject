@@ -96,21 +96,3 @@
   .move-pointer {
     cursor: move;
   }
-
-  ::ng-deep .mat-tab-labels {
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    gap: 80%;
-  }
-
-  ::ng-deep .mat-tab-header {
-    display: flex;
-    position: absolute !important;
-    bottom: 0%;
-    width: 100%;
-  }
-
-  ::ng-deep .hide-tab {
-    display: none !important;
-  }
